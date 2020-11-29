@@ -1,0 +1,5 @@
+NumPuzzle/hoon/10
+NumPuzzle/hans/14
+NumPuzzle/koon/33
+NumPuzzle/kims/67
+NumPuzzle/hihi/33
