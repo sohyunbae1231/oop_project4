@@ -1,0 +1,11 @@
+﻿  Control.cpp
+  Game.cpp
+  Lane.cpp
+  Main.cpp
+C:\Users\user\source\repos\CrossyRoad\CrossyRoadGame\CrossyRoad\Game.cpp(17,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  Player.cpp
+  코드를 생성하고 있습니다...
+C:\Users\user\source\repos\CrossyRoad\CrossyRoadGame\CrossyRoad\Main.cpp(5,12): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\source\repos\CrossyRoad\CrossyRoadGame\CrossyRoad\Control.cpp(21): warning C4715: 'Control::keyControl': 모든 제어 경로에서 값을 반환하지는 않습니다.
+  UI.cpp
+  CrossyRoad.vcxproj -> C:\Users\user\source\repos\CrossyRoad\CrossyRoadGame\Debug\CrossyRoad.exe
