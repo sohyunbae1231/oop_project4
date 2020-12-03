@@ -9,7 +9,7 @@
 #include "history.h"
 using namespace std;
 
-// ÀÌ ÇÔ¼ö »ç¿ëÇØ¼­ µ¥ÀÌÅÍ ±â·ÏÇØÁÖ¼¼¿ä!
+// ì´ í•¨ìˆ˜ ì‚¬ìš©í•´ì„œ ë°ì´í„° ê¸°ë¡í•´ì£¼ì„¸ìš”!
 void writeHistory(string game, string name, int score) {
 	ofstream ofile; ofile.open("file.txt", ios::app);
 	ofile << game + "/" + name + "/" + to_string(score) + "\n"; 
@@ -23,18 +23,18 @@ int main() {
 		system("cls");
 		printf("\n\n\n\n\n\n\n\n\n");
 		printf("%35s", " "); cout << "---------------OOP_MINI_GAMES---------------\n\n";
-		printf("%35s", " "); cout << "               0. ±â·Ï\n";
-		printf("%35s", " "); cout << "               1. ±æ°Ç³ÊÄ£±¸µé/¸®µë°ÔÀÓ\n";
-		printf("%35s", " "); cout << "               2. ¼ıÀÚ ÆÛÁñ\n";
-		printf("%35s", " "); cout << "               3. ¼ıÀÚ ¾ß±¸/ÅØ½ºÆ® Æ÷Ä¿\n";
-		printf("%35s", " "); cout << "               4. ¹ÙÄ«¶ó\n";
-		printf("%35s", " "); cout << "               end. Á¾·á\n\n";
+		printf("%35s", " "); cout << "               0. ê¸°ë¡\n";
+		printf("%35s", " "); cout << "               1. ê¸¸ê±´ë„ˆì¹œêµ¬ë“¤\n";
+		printf("%35s", " "); cout << "               2. ìˆ«ì í¼ì¦\n";
+		printf("%35s", " "); cout << "               3. Bulls and Cows\n";
+		printf("%35s", " "); cout << "               4. ë˜¥ í”¼í•˜ê¸°\n";
+		printf("%35s", " "); cout << "               end. ì¢…ë£Œ\n\n";
 		printf("%35s", " "); cout << "--------------------------------------------\n";
 		printf("%35s", " "); cout << ": ";  cin >> input;
 
 
 
-		// ±â·Ï ½ÇÇà¹® _ Á¤¼®ÈÆ
+		// ê¸°ë¡ ì‹¤í–‰ë¬¸ _ ì •ì„í›ˆ
 		int sort_opt = 1;
 		if (!strcmp(input, "0")) {
 			int searchNum;
@@ -44,15 +44,15 @@ int main() {
 			while (1)
 			{
 				system("cls");
-				cout << "--------------------±â·Ï--------------------\n\n";
+				cout << "--------------------ê¸°ë¡--------------------\n\n";
 				cout << "               1. Search\n";
 				cout << "               2. Sortin Option\n";
-				cout << "               3. Á¾·á\n\n";
+				cout << "               3. ì¢…ë£Œ\n\n";
 				cout << "--------------------------------------------\n";
 				cout << ": ";  cin >> searchNum;
 				
 
-				// 1¹ø
+				// 1ë²ˆ
 				if (searchNum == 1) {
 					while (1) {
 						int select;
@@ -64,22 +64,22 @@ int main() {
 						cin >> select;
 						if (select == 1) { 
 							cout << "game keyword? "; cin >> keyword; hist.print(select, keyword); 
-							cout << "\n\n°è¼ÓÇÏ½Ç·Á¸é ¾Æ¹« ¹®ÀåÀ» Àû°í ENTER¸¦ ´­·¯ÁÖ¼¼¿ä."; cin >> keyword; break; 
+							cout << "\n\nê³„ì†í•˜ì‹¤ë ¤ë©´ ì•„ë¬´ ë¬¸ì¥ì„ ì ê³  ENTERë¥¼ ëˆŒëŸ¬ì£¼ì„¸ìš”."; cin >> keyword; break; 
 						}
 						else if (select == 2) { 
 							cout << "name keyword? "; cin >> keyword; hist.print(select, keyword);
-							cout << "\n\n°è¼ÓÇÏ½Ç·Á¸é ¾Æ¹« ´Ü¾îÀ» Àû°í ENTER¸¦ ´­·¯ÁÖ¼¼¿ä."; cin >> keyword; break;
+							cout << "\n\nê³„ì†í•˜ì‹¤ë ¤ë©´ ì•„ë¬´ ë‹¨ì–´ì„ ì ê³  ENTERë¥¼ ëˆŒëŸ¬ì£¼ì„¸ìš”."; cin >> keyword; break;
 						}
 						else if (select == 3) { 
 							hist.print(select, keyword); 
-							cout << "\n\n°è¼ÓÇÏ½Ç·Á¸é ¾Æ¹« ´Ü¾îÀ» Àû°í ENTER¸¦ ´­·¯ÁÖ¼¼¿ä."; cin >> keyword; break;
+							cout << "\n\nê³„ì†í•˜ì‹¤ë ¤ë©´ ì•„ë¬´ ë‹¨ì–´ì„ ì ê³  ENTERë¥¼ ëˆŒëŸ¬ì£¼ì„¸ìš”."; cin >> keyword; break;
 						}
-						else { cout << "1~3¹ø Áß ÇÏ³ª¸¦ ¼±ÅÃÇÏ½Ã¿À\n\n"; }
+						else { cout << "1~3ë²ˆ ì¤‘ í•˜ë‚˜ë¥¼ ì„ íƒí•˜ì‹œì˜¤\n\n"; }
 						
 					}
 				}
 
-				// 2¹ø
+				// 2ë²ˆ
 				else if (searchNum == 2) {
 					while (1)
 					{
@@ -90,33 +90,33 @@ int main() {
 						cout << "3. Sort by score\n";
 						cin >> select;
 						if (select > 0 && select < 4) { sort_opt = select; hist.sorting(sort_opt); break; }
-						else { cout << "1~3 ¹ø Áß ÇÏ³ª¸¦ ¼±ÅÃÇÏ½Ã¿À\n\n"; }
+						else { cout << "1~3 ë²ˆ ì¤‘ í•˜ë‚˜ë¥¼ ì„ íƒí•˜ì‹œì˜¤\n\n"; }
 					}
 
 				}
 
-				//3¹ø
+				//3ë²ˆ
 				else if (searchNum == 3) {
-					cout << "ÇÁ·Î±×·¥ÀÌ Á¾·áµË´Ï´Ù.\n"; break;
+					cout << "í”„ë¡œê·¸ë¨ì´ ì¢…ë£Œë©ë‹ˆë‹¤.\n"; break;
 				}
 
-				// Àß¸øµÈ ÀÔ·Â
+				// ì˜ëª»ëœ ì…ë ¥
 				else {
-					cout << "Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù.\n";
+					cout << "ì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤.\n";
 				}
 			}
 
 		}
 
 
-		// ±æ°Ç³ÊÄ£±¸µé/¸®µë°ÔÀÓ ½ÇÇà¹® _ ±èÈ¿¹Î
+		// ê¸¸ê±´ë„ˆì¹œêµ¬ë“¤ ì‹¤í–‰ë¬¸ _ ê¹€íš¨ë¯¼
 		else if (!strcmp(input, "1")) { 
 			system("cls");
 
 		}
 
 
-		// ¼ıÀÚ ÆÛÁñ ½ÇÇà¹® _ Á¤¼®ÈÆ
+		// ìˆ«ì í¼ì¦ ì‹¤í–‰ë¬¸ _ ì •ì„í›ˆ
 		else if (!strcmp(input, "2")) {
 			char select[250];
 			string player;
@@ -131,14 +131,14 @@ int main() {
 				printf("%35s", " "); cout << "               1. 3 X 3\n";
 				printf("%35s", " "); cout << "               2. 4 X 4\n";
 				printf("%35s", " "); cout << "               3. 5 X 5\n\n";
-				printf("%35s", " "); cout << "     **5 X 5´Â Á¡¼ö¸¦ ±â·ÏÇÒ ¼ö ¾ø½À´Ï´Ù**\n";
+				printf("%35s", " "); cout << "     **5 X 5ëŠ” ì ìˆ˜ë¥¼ ê¸°ë¡í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤**\n";
 				printf("%35s", " "); cout << "--------------------------------------------\n";
 				printf("%35s", " "); cout << ": ";  cin >> select;
 
 				if (!strcmp(select, "1")) { numBox puzz = numBox(3, 3); puzzle = &puzz; isRank = true; break; }
 				else if (!strcmp(select, "2")) { numBox puzz = numBox(4, 4); puzzle = &puzz; isRank = true; break;}
 				else if (!strcmp(select, "3")) { numBox puzz = numBox(5, 5); puzzle = &puzz; break;}
-				else printf("%35s", " "); cout << "- ¸ñ·Ï¿¡ Á¸ÀçÇÏ´Â °ªÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä\n\n.";
+				else printf("%35s", " "); cout << "- ëª©ë¡ì— ì¡´ì¬í•˜ëŠ” ê°’ì„ ì…ë ¥í•´ì£¼ì„¸ìš”\n\n.";
 			}
 			puzzle->shuffle();
 
@@ -146,22 +146,22 @@ int main() {
 				system("cls");
 				printf("\n\n\n\n\n\n\n\n\n");
 				puzzle->print();
-				printf("\n%35s", " "); printf("¿òÁ÷ÀÎ È½¼ö: %d\n", puzzle->count);
-				printf("\n%35s", " "); printf("Æ÷±âÇÏ°í ½ÍÀ¸½Ã´Ù¸é end¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä", puzzle->count);
-				printf("\n%35s", " "); cout << "¸î ¹øÂ° Ä­À» ¿òÁ÷ÀÌ½Ç °Ç°¡¿ä?: ";  cin >> select;
+				printf("\n%35s", " "); printf("ì›€ì§ì¸ íšŸìˆ˜: %d\n", puzzle->count);
+				printf("\n%35s", " "); printf("í¬ê¸°í•˜ê³  ì‹¶ìœ¼ì‹œë‹¤ë©´ endë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”", puzzle->count);
+				printf("\n%35s", " "); cout << "ëª‡ ë²ˆì§¸ ì¹¸ì„ ì›€ì§ì´ì‹¤ ê±´ê°€ìš”?: ";  cin >> select;
 
 				if (!strcmp(select, "end")) { isRank = false; break;}
-				if (!atoi(select) | atoi(select) > puzzle->getSize()) { printf("\n%28s", " "); cout << "¿Ã¹Ù¸¥ ¼ıÀÚ¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä!"; Sleep(1000); }
+				if (!atoi(select) | atoi(select) > puzzle->getSize()) { printf("\n%28s", " "); cout << "ì˜¬ë°”ë¥¸ ìˆ«ìë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš”!"; Sleep(1000); }
 				else if (puzzle->go(atoi(select) - 1)) puzzle->count++;
-				else { printf("\n%35s", " "); cout << "ÇØ´çÀ§Ä¡·Î ÀÌµ¿ÇÒ ¼ö ¾ø½À´Ï´Ù!"; Sleep(1000); }
+				else { printf("\n%35s", " "); cout << "í•´ë‹¹ìœ„ì¹˜ë¡œ ì´ë™í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤!"; Sleep(1000); }
 
-				if(puzzle->isComplete()) { printf("\n%28s", " "); printf("ÃÑ %d ¹ø ¿òÁ÷¿© ¿Ï¼ºÇß½À´Ï´Ù.", puzzle->count); Sleep(3000); }
+				if(puzzle->isComplete()) { printf("\n%28s", " "); printf("ì´ %d ë²ˆ ì›€ì§ì—¬ ì™„ì„±í–ˆìŠµë‹ˆë‹¤.", puzzle->count); Sleep(3000); }
 			}
 			
 			if (isRank) {
-				printf("\n%28s", " "); printf("Áö±İ Á¡¼ö¸¦ ±â·ÏÇÏ½Ã°Ú½À´Ï±î? 1. ¿¹   2. ¾Æ´Ï¿ä :"); cin >> selHist;
+				printf("\n%28s", " "); printf("ì§€ê¸ˆ ì ìˆ˜ë¥¼ ê¸°ë¡í•˜ì‹œê² ìŠµë‹ˆê¹Œ? 1. ì˜ˆ   2. ì•„ë‹ˆìš” :"); cin >> selHist;
 				if (selHist == 1) {
-					printf("\n%28s", " "); cout << "±â·ÏÇÒ ÀÌ¸§À» Á¤ÇØÁÖ¼¼¿ä : "; cin >> player;
+					printf("\n%28s", " "); cout << "ê¸°ë¡í•  ì´ë¦„ì„ ì •í•´ì£¼ì„¸ìš” : "; cin >> player;
 					writeHistory("NumPuzzle", player, puzzle->count);
 				}
 
@@ -169,7 +169,7 @@ int main() {
 		}
 
 
-		// ¼ıÀÚ ¾ß±¸/ÅØ½ºÆ® Æ÷Ä¿ ½ÇÇà¹® _ ¹è¼ÒÇö
+		// Bulls and Cows _ ë°°ì†Œí˜„
 		else if (!strcmp(input, "3")) {
 			system("cls");
 
@@ -177,7 +177,7 @@ int main() {
 		}
 
 
-		// ¹ÙÄ«¶ó ½ÇÇà¹® _ ÀÓ°á
+		// ë˜¥ í”¼í•˜ê¸° ì‹¤í–‰ë¬¸ _ ì„ê²°
 		else if (!strcmp(input, "4")) {
 			system("cls");
 
@@ -185,14 +185,14 @@ int main() {
 		}
 
 
-		// Á¾·á
+		// ì¢…ë£Œ
 		else if (!strcmp(input, "end")) {
-		printf("%35s", " "); cout << "- ÇÁ·Î±×·¥À» Á¾·áÇÏ°Ú½À´Ï´Ù.\n";
+		printf("%35s", " "); cout << "- í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•˜ê² ìŠµë‹ˆë‹¤.\n";
 			return 0;
 		}
-		// Àß¸øµÈ °ª
+		// ì˜ëª»ëœ ê°’
 		else {
-			printf("%35s", " "); cout << "- ¸ñ·Ï¿¡ Á¸ÀçÇÏ´Â °ªÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä\n\n.";
+			printf("%35s", " "); cout << "- ëª©ë¡ì— ì¡´ì¬í•˜ëŠ” ê°’ì„ ì…ë ¥í•´ì£¼ì„¸ìš”\n\n.";
 			Sleep(1000);
 		}
 
