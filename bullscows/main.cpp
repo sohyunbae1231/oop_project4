@@ -3,7 +3,8 @@
 // (컴퓨터가 랜덤하게 생성한 값을 플레이어가 맞춘다.)
 // 2. The player can expect the generated string and enter it once per turn.
 // (플레이어는 생성된 문자열을 예상하여 1턴에 1번씩 입력할 수 있다.)
-// 3. Compare the string you entered to the correct answer and
+// 3. Compare the string you entered to the correct answer
+// then count Bulls(numbers of characters that are all correct) and Cows(number of characters whose locations are incorrect but values are correct).
 // 플레이어가 입력한 문자열을 정답과 비교하여 값과 위치가 모두 맞는 문자의 갯수를 'Bulls'
 // 위치는 틀렸지만 값은 맞는 문자의 갯수를 'Cows'로 카운트
 
