@@ -109,7 +109,7 @@ int main() {
 		}
 
 
-		// 길건너친구들/리듬게임 실행문 _ 김효민
+		// 길건너친구들 실행문 _ 김효민
 		else if (!strcmp(input, "1")) { 
 			system("cls");
 
@@ -169,7 +169,7 @@ int main() {
 		}
 
 
-		// 숫자 야구/텍스트 포커 실행문 _ 배소현
+		// Bulls and Cows _ 배소현
 		else if (!strcmp(input, "3")) {
 			system("cls");
 
@@ -177,7 +177,7 @@ int main() {
 		}
 
 
-		// 바카라 실행문 _ 임결
+		// 똥 피하기 실행문 _ 임결
 		else if (!strcmp(input, "4")) {
 			system("cls");
 
