@@ -19,7 +19,6 @@ private:
 	UI* ui;
 	vector<Lane*>map;
 public:
-	//Game();
 	Game(int w = 20, int h = 10);
 	~Game();
 	void init();
