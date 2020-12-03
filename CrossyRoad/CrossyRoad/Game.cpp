@@ -26,6 +26,8 @@ using namespace std;
 		system("mode con cols=80 lines=60 | title Crossy Road");
 		//Set quit(dead) state false
 		quit = false;
+		//set score 0
+		score = 0;
 		//Hide Cursor
 		HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);//get console handle
 		CONSOLE_CURSOR_INFO ConsoleCursor;
