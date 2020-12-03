@@ -7,10 +7,6 @@
 #include "Player.h"
 #include "UI.h"
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 8b4dea3e1cfadf12abc3a182b49da3ff0c4ee0ec
 using namespace std;
 
 class Game {
