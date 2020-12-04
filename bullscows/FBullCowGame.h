@@ -1,11 +1,10 @@
 #include <string>
 
 using FString = std::string;
-using int32 = int;
 
 struct FBullCowCount {
-	int32 Bulls = 0;
-	int32 Cows = 0;
+	int Bulls = 0;
+	int Cows = 0;
 };
 
 enum class EGuessStatus {
@@ -28,24 +27,24 @@ enum class EWordLengthInputStatus {
 class FBullCowGame {
 public:
 	FBullCowGame();
-	FBullCowGame(int32 WordLength);
+	FBullCowGame(int WordLength);
 
-	int32 GetMaxTries() const;
-	int32 GetCurrentTry() const;
-	int32 GetHiddenWordLength() const;
+	int GetMaxTries() const;
+	int GetCurrentTry() const;
+	int GetHiddenWordLength() const;
 	bool IsGameWon() const;
-	EGuessStatus CheckGuessValidity(FString) const; 
+	EGuessStatus CheckGuessValidity(FString) const;
 	EWordLengthInputStatus CheckWordLengthValidity(FString) const;
 
-	void Reset(int32);
+	void Reset(int);
 	FBullCowCount SubmitValidGuess(FString);
 
 private:
-	int32 MyCurrentTry;
+	int MyCurrentTry;
 	FString MyHiddenWord;
-	bool bGameIsWon;
+	bool GameIsWon;
 
-	FString HiddenWordAccordingToWordLength(int32) const;
+	FString HiddenWordAccordingToWordLength(int) const;
 
 	bool IsNumber(FString) const;
 
