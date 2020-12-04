@@ -43,7 +43,7 @@ void FBullCowGame::Reset(int Length) {
 FString FBullCowGame::HiddenWordAccordingToWordLength(int Length) const {
 
 	TMap<int, FString> WordToWordLength{
-	{ 3,"cpa" },
+	{ 3,"cau" },
 	{ 4, "bong" },
 	{ 5, "puang" },
 	{ 6, "object" },
@@ -51,18 +51,6 @@ FString FBullCowGame::HiddenWordAccordingToWordLength(int Length) const {
 	};
 
 	return WordToWordLength[Length];
-}
-
-bool FBullCowGame::IsNumber(FString String) const {
-
-	try {
-		std::stoi(String);
-	}
-	catch (invalid_argument e) {
-		return false;
-	}
-	
-	return true;
 }
 
 EGuessStatus FBullCowGame::CheckGuessValidity(FString Guess) const {
@@ -87,9 +75,6 @@ EWordLengthInputStatus FBullCowGame::CheckWordLengthValidity(FString String) con
 
 	if (String.empty()) {
 		return EWordLengthInputStatus::Empty;
-	}
-	else if (!IsNumber(String)) {
-		return EWordLengthInputStatus::Not_number;
 	}
 	else {
 		//if it arrives here, it's because it's a number 
@@ -152,17 +137,6 @@ bool FBullCowGame::IsIsogram(FString Word) const {
 		}
 		else {
 			LetterSeen[Letter] = true;	//add letter to the map as seen
-		}
-	}
-
-	return true;
-}
-
-bool FBullCowGame::IsLowerCase(FString Word) const {
-
-	for (auto Letter : Word) { //run through every letter
-		if (!islower(Letter)) {
-			return false;
 		}
 	}
 
