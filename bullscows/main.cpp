@@ -44,13 +44,12 @@ void PrintIntro() {
 	std::cout << "          (o o)         † ◞     ◟ † " << std::endl;
 	std::cout << "   /-------\\ /         ʕ⸝          ⸜ʔ" << std::endl;
 	std::cout << "  / | BULL |O        ~~(~๑ ●ิ .. ● ิ๑ ~) ~~    " << std::endl;
-	std::cout << " *  |-,--- |            ◟    ‿    ◞      " << std::endl;
+	std::cout << " *  |-,--- |            ◟    ‿    ◞      "<< std::endl;
 	std::cout << "    ^      ^             *･･･････････*   " << std::endl;
 	std::cout << "                            CAU      " << std::endl;
 
-	std::cout << "Can you guess the " << BCGame.GetHiddenWordLength();
-	std::cout << " unique letters I'm thinking of?\n";
-	std::cout << std::endl;
+	std::cout << "Can you guess the unique letters I'm thinking of?" << std::endl;
+	std::cout << "Choose the length from 3 to 7. You can get more points if you try a longer length!" << std::endl;
 	return;
 }
 
@@ -85,7 +84,7 @@ bool AskToPlayAgain() {
 	FText Response = "";
 	std::getline(std::cin, Response);
 
-	return (Response[0] == 'y') || (Response[0] == 'Y');
+	return (Response[0] == 'y');
 }
 
 //loop continually until the user gives valid input
@@ -154,7 +153,7 @@ int GetValidUserWordLength() {
 			std::cout << "Please enter a number, not words.\n\n";
 			break;
 		case EWordLengthInputStatus::Out_of_bounds_number:
-			std::cout << "Please enter a number between 3 and 7, these included.\n\n";
+			std::cout << "Please enter a number between 3 and 7.\n\n";
 			break;
 		default:
 			//assume the guess is valid
